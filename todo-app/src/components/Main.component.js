@@ -19,9 +19,11 @@ export default class MainComponent extends Component {
         };
         this.mergeTodos = this.mergeTodos.bind(this);
     }
+    
     componentDidMount() {
         this.mergeTodos()
     }
+    
     mergeTodos() {
         //GET-запрос получения массива TODO с сервера:
         fetch('/todos')
@@ -58,6 +60,7 @@ export default class MainComponent extends Component {
                 }
             })
     }
+    
     showTodos() {
         //Вывод списка TODO
         return this.state.todos.map((todo, i) => {
@@ -100,6 +103,7 @@ export default class MainComponent extends Component {
                 )
         });
     }
+    
     showEditField(showTodo) {
         //Вывод области редактирования TODO
         if(this.state.todos.length>0) {
@@ -235,6 +239,7 @@ export default class MainComponent extends Component {
             )
         }
     }
+    
     showMain(showTodo) {
         //Вывод основной области
         if(this.state.todos.length>0) {
@@ -305,6 +310,7 @@ export default class MainComponent extends Component {
             )
         }
     }
+    
     render() {
         //Вывод страницы полностью (основной области и нав.бара)
         /* Определение showTodo для показа текущего редактируемого TODO, при этом
