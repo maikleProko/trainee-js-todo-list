@@ -4,6 +4,7 @@ import "../Modal.css"
 
 
 export default class MainComponent extends Component {
+    
     constructor(props) {
         super(props);
         this.state = {
