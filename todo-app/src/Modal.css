@@ -1,0 +1,73 @@
+input[type=checkbox] {
+    display: none;
+}
+
+body {
+}
+button {
+    outline: none !important;
+}
+.content-wrapper {
+    width: 100%;
+    padding: 10px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.confirm-modal {
+    display: block;
+    pointer-events: none;
+    transition: opacity 0.5s;
+}
+.confirm-modal {
+    width: auto;
+    margin: auto;
+}
+.confirm-modal::before {
+    content: "";
+    display: block;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    min-height: 200px;
+    z-index: 99;
+    opacity: 1;
+    pointer-events: all;
+}
+.confirm-modal div {
+    position: absolute;
+    transition: transform 0.75s;
+    z-index: 99;
+    top: 50px;
+    max-width: 90%;
+    width: 450px;
+    background-color: #fafafa;
+    padding: 20px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+    color: #080808;
+    border-radius: 5px;
+    pointer-events: none;
+}
+input:not(:checked) + .confirm-modal {
+}
+input:not(:checked) + .confirm-modal, input:not(:checked) + .confirm-modal * {
+    opacity: 0;
+}
+input:not(:checked) + .confirm-modal::before {
+    height: 0;
+    width: 0;
+}
+input:not(:checked) + .confirm-modal div {
+    transform: translate(-50%, -100px);
+}
+.confirm-modal a {
+    margin-left: 41%;
+    margin-right: 71%;
+    pointer-events: auto;
+}
+
