@@ -52,7 +52,7 @@ export default class MainComponent extends Component {
                     this.setState({currentName: resTodos[this.state.currentId].name})
                     this.setState({currentDate: resTodos[this.state.currentId].date})
                     this.setState({currentStatus: resTodos[this.state.currentId].status})
-                    //Если TODO нет, то переменнные currentName, currentDate, currentStatus обнуляются
+                    //Если список TODO пуст, то переменнные currentName, currentDate, currentStatus обнуляются
                     if(resTodos.length === 0) {
                         this.setState({currentName: ""})
                         this.setState({currentDate: ""})
