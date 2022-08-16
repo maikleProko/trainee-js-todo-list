@@ -256,7 +256,7 @@ export default class MainComponent extends Component {
                                         {this.showTodos()}
                                     </table>
                                 </tr>
-                                {/* Вывод списка TODO*/}
+                                {/* Вывод кнопки для добавления TODO*/}
                                 <tr valign="bottom">
                                     <table className="Legacy-table-buttons">
                                         <tr>
