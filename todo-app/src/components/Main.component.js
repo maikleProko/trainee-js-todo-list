@@ -9,7 +9,7 @@ export default class MainComponent extends Component {
         super(props);
         this.state = {
             /* Переменные: currentId, currentName, currentDate, currentStatus
-             отвечают за текущую заметку, которая может быть изменена или удалена: */
+             отвечают за текущий TODO, который может быть изменен или удален: */
             currentId: 0,
             currentName: "",
             currentDate: "",
